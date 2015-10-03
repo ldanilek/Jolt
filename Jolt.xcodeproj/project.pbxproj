@@ -14,6 +14,8 @@
 		9B69EC4C1BC05B9E000EF102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B69EC4A1BC05B9E000EF102 /* LaunchScreen.storyboard */; };
 		9B69EC571BC05B9F000EF102 /* JoltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B69EC561BC05B9F000EF102 /* JoltTests.swift */; };
 		9B69EC621BC05B9F000EF102 /* JoltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B69EC611BC05B9F000EF102 /* JoltUITests.swift */; };
+		9B69EC701BC05D5D000EF102 /* MicrosoftBandKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B69EC6F1BC05D5D000EF102 /* MicrosoftBandKit_iOS.framework */; settings = {ASSET_TAGS = (); }; };
+		9B69EC721BC05D79000EF102 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B69EC711BC05D79000EF102 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9B69EC5D1BC05B9F000EF102 /* JoltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B69EC611BC05B9F000EF102 /* JoltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoltUITests.swift; sourceTree = "<group>"; };
 		9B69EC631BC05B9F000EF102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B69EC6F1BC05D5D000EF102 /* MicrosoftBandKit_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicrosoftBandKit_iOS.framework; path = Jolt/MicrosoftBandKit_iOS.framework; sourceTree = "<group>"; };
+		9B69EC711BC05D79000EF102 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B69EC721BC05D79000EF102 /* CoreBluetooth.framework in Frameworks */,
+				9B69EC701BC05D5D000EF102 /* MicrosoftBandKit_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +83,8 @@
 		9B69EC351BC05B9E000EF102 = {
 			isa = PBXGroup;
 			children = (
+				9B69EC6F1BC05D5D000EF102 /* MicrosoftBandKit_iOS.framework */,
+				9B69EC711BC05D79000EF102 /* CoreBluetooth.framework */,
 				9B69EC401BC05B9E000EF102 /* Jolt */,
 				9B69EC551BC05B9F000EF102 /* JoltTests */,
 				9B69EC601BC05B9F000EF102 /* JoltUITests */,
@@ -398,6 +406,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Jolt",
+				);
 				INFOPLIST_FILE = Jolt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CAL.Jolt;
@@ -409,6 +421,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Jolt",
+				);
 				INFOPLIST_FILE = Jolt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CAL.Jolt;
